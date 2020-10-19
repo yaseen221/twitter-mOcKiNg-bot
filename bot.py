@@ -1,4 +1,3 @@
-from keys import *
 import tweepy
 import json
 import random
