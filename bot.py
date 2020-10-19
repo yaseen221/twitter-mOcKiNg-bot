@@ -51,4 +51,4 @@ api = tweepy.API(auth, wait_on_rate_limit=True, wait_on_rate_limit_notify=True)
 tweets_listener = MyStreamListener(api)
 stream = tweepy.Stream(api.auth, listener=tweets_listener)
 
-stream.filter(follow=['815251947993186304'], is_async=True)
+stream.filter(follow=['25073877'], is_async=True)
