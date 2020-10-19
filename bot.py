@@ -1,6 +1,12 @@
 import tweepy
 import json
 import random
+from os import environ
+
+api_key = environ['API_KEY']
+api_secret_key = environ['API_SECRET_KEY']
+access_token = environ['ACCESS_TOKEN']
+access_token_secret = environ['ACCESS_TOKEN_SECRET']
 
 def from_creator(status):
     if hasattr(status, 'retweeted_status'):
