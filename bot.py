@@ -38,7 +38,6 @@ class MyStreamListener(tweepy.StreamListener):
             
             # mock_text = ''.join([c.upper() if random.randint(0,1) else c for i,c in enumerate(text.lower())])
             api.update_status(f"{mock_text} {t}", in_reply_to_status_id=tweet.id, auto_populate_reply_metadata=True)
-            # print(mock_text, *mentions, *tags)
     
     def on_error(self, status):
         print("Error detected")
