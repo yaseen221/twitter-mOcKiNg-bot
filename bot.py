@@ -35,14 +35,14 @@ class MyStreamListener(tweepy.StreamListener):
                 if word.startswith('#'):
                     tags.append(word)
 
-            text = ' '.join([word for word in text.split() if not word.startswith(('@', '#'))])
+            # text = ' '.join([word for word in text.split() if not word.startswith(('@', '#'))])
 
             mock_text = ''.join([c.upper() if not i%2 else c for i,c in enumerate(text.lower())])
 
-            t = ' '.join(tags)
+            # t = ' '.join(tags)
             
             # mock_text = ''.join([c.upper() if random.randint(0,1) else c for i,c in enumerate(text.lower())])
-            api.update_status(f"{mock_text} {t}", in_reply_to_status_id=tweet.id, auto_populate_reply_metadata=True)
+            api.update_status(f"{mock_text}", in_reply_to_status_id=tweet.id, auto_populate_reply_metadata=True)
     
     def on_error(self, status):
         print("Error detected")
